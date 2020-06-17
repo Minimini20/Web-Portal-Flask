@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="{{url_for('static' , filename = '/css/styleAdmin.css')}}">
+<style>
+  .alert-danger{
+padding: 8px;
+border-radius: 10px;
+font-size: 1rem;
+margin-bottom: 14px;
+border: 2px solid darkred;
+background-color: rgba(230, 14, 14, 0.924);
+color: white;
+width:30%;
+}
+.alert-success{
+padding: 8px;
+border-radius: 10px;
+font-size: 1rem;
+margin-bottom: 14px;
+border: 2px solid darkgreen;
+background-color: rgb(19, 187, 41);
+color: white;
+width: 30%;
+
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <span class="navbar-brand">
+           <b>Brand</b>
+          </span>
+        </Navbar>
+      </nav>
+    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <p class="lead lighten text-center">You can now reset your password.</p>
+        </div>
+      </div>
+      {% for category, message in get_flashed_messages(with_categories=True) %}
+      <div class="alert-{{category}}"> {{ message }}</div>
+    {% endfor %}
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card bg-light " style="width: 60rem;">
+                <div class="card-body">
+                  <form  method="POST" action="/reset/{{ value }}">
+                    <div class="form-group">
+                        <label>New password:</label>
+                        <input type="password" class="form-control" placeholder="new password" name= "password">
+                    </div>
+                     <div class="form-group">
+                      <label>Confirm password:</label>
+                      <input type="password" class="form-control" placeholder="confirm password" name="confirm">
+                   </div>
+                    <div class="text-center">
+                      <button type="submit" name="btn" class="btn btn-lg btn-center btn-danger">Reset</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>

@@ -1,0 +1,235 @@
+2020-06-05 20:27:12,265:INFO: * Restarting with stat
+2020-06-05 20:27:15,082:WARNING: * Debugger is active!
+2020-06-05 20:27:15,179:INFO: * Debugger PIN: 171-762-977
+2020-06-05 20:27:15,247:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-05 20:29:47,154:INFO: * Restarting with stat
+2020-06-05 20:29:49,796:WARNING: * Debugger is active!
+2020-06-05 20:29:49,820:INFO: * Debugger PIN: 171-762-977
+2020-06-05 20:29:49,832:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-05 20:33:30,798:INFO: * Restarting with stat
+2020-06-05 20:33:33,242:WARNING: * Debugger is active!
+2020-06-05 20:33:33,266:INFO: * Debugger PIN: 171-762-977
+2020-06-05 20:33:33,282:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-05 20:54:35,387:INFO: * Restarting with stat
+2020-06-05 20:54:38,871:WARNING: * Debugger is active!
+2020-06-05 20:54:38,955:INFO: * Debugger PIN: 171-762-977
+2020-06-05 20:54:39,043:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-05 20:55:53,135:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-05 20:55:53,505:INFO: * Restarting with stat
+2020-06-05 20:55:58,509:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-05 21:04:40,231:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-05 21:47:39,640:INFO:127.0.0.1 - - [05/Jun/2020 21:47:39] "[37mGET / HTTP/1.1[0m" 200 -
+2020-06-05 21:47:39,760:INFO:127.0.0.1 - - [05/Jun/2020 21:47:39] "[32mGET /static//css/style.css HTTP/1.1[0m" 308 -
+2020-06-05 21:47:39,980:INFO:127.0.0.1 - - [05/Jun/2020 21:47:39] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2020-06-05 21:47:40,184:INFO:127.0.0.1 - - [05/Jun/2020 21:47:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-06-05 21:47:44,548:INFO:127.0.0.1 - - [05/Jun/2020 21:47:44] "[37mGET /register HTTP/1.1[0m" 200 -
+2020-06-05 21:48:09,752:ERROR:Exception on /register [POST]
+Traceback (most recent call last):
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 2345, in _wrap_pool_connect
+    return fn()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\default.py", line 490, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' (10061)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/AlokK/Desktop/MyApp/myApp.py", line 65, in register
+    db.execute("INSERT INTO user(name,email,password,role) VALUES(:name,:email,:password,:role)",
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\orm\session.py", line 1291, in execute
+    return self._connection_for_bind(bind, close_with_result=True).execute(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\orm\session.py", line 1146, in _connection_for_bind
+    return self.transaction._connection_for_bind(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\orm\session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 2311, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 2348, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1590, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 2345, in _wrap_pool_connect
+    return fn()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\pool\base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\default.py", line 490, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\AlokK\AppData\Local\Programs\Python\Python38\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' (10061)")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-06-05 21:48:10,008:INFO:127.0.0.1 - - [05/Jun/2020 21:48:10] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2020-06-05 21:50:41,004:INFO: * Restarting with stat
+2020-06-05 21:50:43,734:WARNING: * Debugger is active!
+2020-06-05 21:50:43,806:INFO: * Debugger PIN: 171-762-977
+2020-06-05 21:50:43,851:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 01:08:08,282:INFO: * Restarting with stat
+2020-06-06 01:08:11,114:WARNING: * Debugger is active!
+2020-06-06 01:08:11,198:INFO: * Debugger PIN: 171-762-977
+2020-06-06 01:08:11,238:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 01:08:50,052:INFO:127.0.0.1 - - [06/Jun/2020 01:08:50] "[37mGET /register HTTP/1.1[0m" 200 -
+2020-06-06 01:24:02,229:INFO:Registered Successfully : maggie - maggie@gmail.com
+2020-06-06 01:24:02,309:INFO:127.0.0.1 - - [06/Jun/2020 01:24:02] "[32mPOST /register HTTP/1.1[0m" 302 -
+2020-06-06 01:24:02,582:INFO:127.0.0.1 - - [06/Jun/2020 01:24:02] "[37mGET / HTTP/1.1[0m" 200 -
+2020-06-06 01:28:38,126:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 01:28:40,122:INFO: * Restarting with stat
+2020-06-06 01:28:52,831:WARNING: * Debugger is active!
+2020-06-06 01:28:52,924:INFO: * Debugger PIN: 171-762-977
+2020-06-06 01:28:52,996:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 01:28:57,579:INFO:127.0.0.1 - - [06/Jun/2020 01:28:57] "[37mGET / HTTP/1.1[0m" 200 -
+2020-06-06 01:29:11,088:INFO: * Restarting with stat
+2020-06-06 01:29:14,347:WARNING: * Debugger is active!
+2020-06-06 01:29:14,371:INFO: * Debugger PIN: 171-762-977
+2020-06-06 01:29:14,386:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 01:29:58,710:WARNING:No user found in the database
+2020-06-06 01:29:58,745:INFO:127.0.0.1 - - [06/Jun/2020 01:29:58] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-06-06 01:47:41,184:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 01:47:43,064:INFO: * Restarting with stat
+2020-06-06 12:29:48,574:INFO: * Restarting with stat
+2020-06-06 12:29:52,343:WARNING: * Debugger is active!
+2020-06-06 12:29:52,812:INFO: * Debugger PIN: 171-762-977
+2020-06-06 12:29:52,859:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 12:34:18,728:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 12:34:19,759:INFO: * Restarting with stat
+2020-06-06 12:34:32,738:WARNING: * Debugger is active!
+2020-06-06 12:34:32,931:INFO: * Debugger PIN: 171-762-977
+2020-06-06 12:34:32,977:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 12:35:14,790:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 12:35:14,963:INFO: * Restarting with stat
+2020-06-06 12:35:18,230:WARNING: * Debugger is active!
+2020-06-06 12:35:18,258:INFO: * Debugger PIN: 171-762-977
+2020-06-06 12:35:18,297:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 12:35:18,959:WARNING:No user found in the database
+2020-06-06 12:35:19,183:INFO:127.0.0.1 - - [06/Jun/2020 12:35:19] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-06-06 12:35:19,660:INFO:127.0.0.1 - - [06/Jun/2020 12:35:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2020-06-06 12:35:20,878:INFO:127.0.0.1 - - [06/Jun/2020 12:35:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-06-06 12:35:29,888:INFO:127.0.0.1 - - [06/Jun/2020 12:35:29] "[33mGET /login_validation HTTP/1.1[0m" 404 -
+2020-06-06 12:35:36,329:INFO:127.0.0.1 - - [06/Jun/2020 12:35:36] "[35m[1mGET /log HTTP/1.1[0m" 500 -
+2020-06-06 12:35:36,421:INFO:127.0.0.1 - - [06/Jun/2020 12:35:36] "[37mGET /log?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2020-06-06 12:35:36,425:INFO:127.0.0.1 - - [06/Jun/2020 12:35:36] "[37mGET /log?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2020-06-06 12:35:36,437:INFO:127.0.0.1 - - [06/Jun/2020 12:35:36] "[37mGET /log?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2020-06-06 12:35:37,470:INFO:127.0.0.1 - - [06/Jun/2020 12:35:37] "[37mGET /log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-06-06 12:35:37,574:INFO:127.0.0.1 - - [06/Jun/2020 12:35:37] "[37mGET /log?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2020-06-06 12:35:38,006:INFO:127.0.0.1 - - [06/Jun/2020 12:35:38] "[37mGET /log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-06-06 19:07:23,505:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 19:07:24,208:INFO: * Restarting with stat
+2020-06-06 23:35:47,991:INFO: * Restarting with stat
+2020-06-06 23:35:51,491:WARNING: * Debugger is active!
+2020-06-06 23:35:51,709:INFO: * Debugger PIN: 171-762-977
+2020-06-06 23:35:51,725:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 23:36:23,775:INFO:127.0.0.1 - - [06/Jun/2020 23:36:23] "[32mGET /log HTTP/1.1[0m" 302 -
+2020-06-06 23:36:23,787:INFO:127.0.0.1 - - [06/Jun/2020 23:36:23] "[33mGET /test.log HTTP/1.1[0m" 404 -
+2020-06-06 23:36:49,611:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 23:36:49,870:INFO: * Restarting with stat
+2020-06-06 23:36:52,780:WARNING: * Debugger is active!
+2020-06-06 23:36:52,842:INFO: * Debugger PIN: 171-762-977
+2020-06-06 23:36:52,920:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 23:37:01,114:INFO:127.0.0.1 - - [06/Jun/2020 23:37:01] "[33mGET /test.log HTTP/1.1[0m" 404 -
+2020-06-06 23:37:02,497:INFO:127.0.0.1 - - [06/Jun/2020 23:37:02] "[33mGET /test.log HTTP/1.1[0m" 404 -
+2020-06-06 23:37:10,898:INFO:127.0.0.1 - - [06/Jun/2020 23:37:10] "[37mGET / HTTP/1.1[0m" 200 -
+2020-06-06 23:37:15,840:INFO:127.0.0.1 - - [06/Jun/2020 23:37:15] "[33mGET /login_validation HTTP/1.1[0m" 404 -
+2020-06-06 23:37:22,153:INFO:127.0.0.1 - - [06/Jun/2020 23:37:22] "[35m[1mGET /log HTTP/1.1[0m" 500 -
+2020-06-06 23:37:22,395:INFO:127.0.0.1 - - [06/Jun/2020 23:37:22] "[37mGET /log?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2020-06-06 23:37:22,399:INFO:127.0.0.1 - - [06/Jun/2020 23:37:22] "[37mGET /log?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2020-06-06 23:37:22,411:INFO:127.0.0.1 - - [06/Jun/2020 23:37:22] "[37mGET /log?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2020-06-06 23:37:23,511:INFO:127.0.0.1 - - [06/Jun/2020 23:37:23] "[37mGET /log?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2020-06-06 23:37:23,819:INFO:127.0.0.1 - - [06/Jun/2020 23:37:23] "[37mGET /log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-06-06 23:37:24,067:INFO:127.0.0.1 - - [06/Jun/2020 23:37:24] "[37mGET /log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-06-06 23:38:00,512:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-06 23:38:00,819:INFO: * Restarting with stat
+2020-06-06 23:38:03,530:WARNING: * Debugger is active!
+2020-06-06 23:38:03,561:INFO: * Debugger PIN: 171-762-977
+2020-06-06 23:38:03,577:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-06 23:38:03,891:INFO:127.0.0.1 - - [06/Jun/2020 23:38:03] "[35m[1mGET /log HTTP/1.1[0m" 500 -
+2020-06-06 23:38:04,019:INFO:127.0.0.1 - - [06/Jun/2020 23:38:04] "[37mGET /log?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2020-06-06 23:38:04,027:INFO:127.0.0.1 - - [06/Jun/2020 23:38:04] "[37mGET /log?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2020-06-06 23:38:04,035:INFO:127.0.0.1 - - [06/Jun/2020 23:38:04] "[37mGET /log?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2020-06-06 23:38:04,231:INFO:127.0.0.1 - - [06/Jun/2020 23:38:04] "[37mGET /log?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2020-06-06 23:38:04,360:INFO:127.0.0.1 - - [06/Jun/2020 23:38:04] "[37mGET /log?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-06-07 20:04:14,484:INFO: * Restarting with stat
+2020-06-07 20:04:16,972:WARNING: * Debugger is active!
+2020-06-07 20:04:17,096:INFO: * Debugger PIN: 171-762-977
+2020-06-07 20:04:17,120:INFO: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-06-07 20:05:59,371:INFO:127.0.0.1 - - [07/Jun/2020 20:05:59] "[37mGET / HTTP/1.1[0m" 200 -
+2020-06-07 20:06:00,039:INFO:127.0.0.1 - - [07/Jun/2020 20:06:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2020-06-07 20:06:05,015:INFO:127.0.0.1 - - [07/Jun/2020 20:06:05] "[37mGET /stream HTTP/1.1[0m" 200 -
+2020-06-07 20:06:05,279:INFO:127.0.0.1 - - [07/Jun/2020 20:06:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-06-07 20:06:15,343:INFO:127.0.0.1 - - [07/Jun/2020 20:06:15] "[37mGET /stream HTTP/1.1[0m" 200 -
+2020-06-07 20:51:52,702:INFO: * Detected change in 'C:\\Users\\AlokK\\Desktop\\MyApp\\myApp.py', reloading
+2020-06-07 20:51:56,606:INFO: * Restarting with stat

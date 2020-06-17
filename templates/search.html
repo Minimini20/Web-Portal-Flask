@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+  {{ super() }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body%}
+{{ super() }}
+{% for category, message in get_flashed_messages(with_categories=True) %}
+  <div class="alert-{{category}} block"> {{ message }}</div>
+{% endfor %}
+<br>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">Role</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody id="myTable">
+        {% for item in values %}
+        
+            <tr>
+            <th scope="row"> {{ item.id }} </th>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.role}}</td>
+            <td>
+                <form action = "{{url_for('delete' , id = item.id , page = 1)}}" method = "POST">
+                    <input type="hidden" name="_method" value="Delete">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+            </td>
+            </tr>
+        
+        {% endfor %}
+       <br>
+    </tbody>
+</table>
+<button type="button" class="btn btn-secondary btn-lg" ><a href="/view/1">Back</a></button>
+{% endblock %}

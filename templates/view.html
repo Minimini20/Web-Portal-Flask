@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+  {{ super() }}
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+{{ super() }}
+<br>
+<div class="container">
+<form action="/search" method="POST">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search username..." name="name">
+    <div class="input-group-append">
+      <button class="btn btn-success" type="submit">Search</button>
+    </div>
+  </div>
+</form>
+{% for category, message in get_flashed_messages(with_categories=True) %}
+  <div class="alert-{{category}} block"> {{ message }}</div>
+{% endfor %}
+</div>
+  <br>
+  <button type="button" class="btn btn-dark btn-lg" ><a href="/download">Download</a></button>
+      <button type="button" class="btn btn-secondary btn-lg" ><a href="/myApp/admin/home">Back</a></button>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Email ID</th>
+                <th scope="col">Role</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+                {% for item in values %}
+                
+                    <tr>
+                    <th scope="row"> {{ item.id }} </th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.role}}</td>
+                    <td>
+                        <form action = "{{url_for('delete' , id = item.id , page = 1 )}}" method = "POST">
+                            <input type="hidden" name="_method" value="Delete">
+                            <input type="submit" value="Delete" class="btn btn-danger">
+                        </form>
+                    </td>
+                    </tr>
+                
+                {% endfor %}
+               <br>
+            </tbody>
+      </table>
+      <div class=" d-flex justify-content-center text-center">
+      <p>Page {{ page }} of {{ html_page }} </p>
+      </div>
+  <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" id="previous"><a class="page-link" href="/view/{{ previous }}">Previous</a></li>
+    {% for num in range(1,total) %}
+    <li class="page-item"><a class="page-link" href="/view/{{ num }}">{{ num }}</a></li>
+    {% endfor %}
+  <li class="page-item" id="next"><a class="page-link" href="/view/{{ next }}">Next</a></li>
+  </ul>
+</nav>
+
+       
+<script>
+ $('#next').toggleClass('disabled', {{page}} === {{html_page}});
+ $('#previous').toggleClass('disabled', {{page}} === 1);
+</script>
+
+{% endblock %}
